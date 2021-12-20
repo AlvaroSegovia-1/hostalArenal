@@ -1,10 +1,10 @@
-import * as React from "react"
+import React from "react"
 
 import Layout from "../components/layout"
 
 const IndexPage = () => (
   <Layout>
-    <h1>Soy Index</h1>
+    <h1> Nosotros</h1>
   </Layout>
 )
 

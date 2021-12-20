@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
-const UsingDSG = () => (
+/* const UsingDSG = () => (
   <Layout>
     <Seo title="Using DSG" />
     <h1>Hello from a DSG Page</h1>
@@ -18,6 +18,6 @@ const UsingDSG = () => (
     </p>
     <Link to="/">Go back to the homepage</Link>
   </Layout>
-)
+) */
 
-export default UsingDSG
+/* export default UsingDSG */
