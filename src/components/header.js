@@ -1,11 +1,12 @@
 import React from "react"
 import { css } from "@emotion/react"
+import Navegacion from './nav'
 
 const Header = () => {
   return (
     <header
       css={css`
-        background-color: #333;
+        background-color: #222;
         padding: 1rem;
       `}
     >
@@ -29,6 +30,7 @@ const Header = () => {
         >
           Hostal Arenal
         </h1>
+        <Navegacion/>
       </div>
     </header>
   )
