@@ -6,7 +6,7 @@ module.exports = {
     siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
   },
   plugins: [
-    'gatsby-plugin-emotion',
+    "gatsby-plugin-emotion",
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
     {
@@ -30,6 +30,12 @@ module.exports = {
         // theme_color: `#663399`,
         display: `minimal-ui`,
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+      },
+    },
+    {
+      resolve: "gatsby-source-datocms",
+      options: {
+        apiToken: "a0076427399fb06e8c6d6fb7f33819",
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
