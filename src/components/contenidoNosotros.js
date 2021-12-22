@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
+//import { StaticImage } from "gatsby-plugin-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import styled from "@emotion/styled"
 import { css } from "@emotion/react"
 
@@ -29,18 +30,21 @@ const ContenidoNosotros = () => {
           titulo
           contenido
           imagen {
-            fluid(maxWidth: 1200) {
-              ...GatsbyDatoCmsFluid
-            }
+            gatsbyImageData(width: 1000)
           }
         }
       }
     }
   `)
 
-  //console.log(resultado.allDatoCmsPagina.nodes[0])
+  // console.log(resultado.allDatoCmsPagina.nodes[0])
+  // console.log(ima)
 
   const { titulo, contenido } = resultado.allDatoCmsPagina.nodes[0]
+
+  const ima = getImage(
+    resultado.allDatoCmsPagina.nodes[0].imagen.gatsbyImageData
+  )
 
   return (
     <>
@@ -55,9 +59,17 @@ const ContenidoNosotros = () => {
       </h2>
       <Contenido>
         <p>{contenido}</p>
-        <StaticImage
+        {/* <StaticImage
           src="https://www.datocms-assets.com/60107/1640013370-4.jpg?auto=format"
           alt="habitacion"
+        /> */}
+        <GatsbyImage
+          image={ima}
+          alt="imagen"
+          css={css`
+            border-radius: 1.4rem;
+            border: black 3px solid;
+          `}
         />
       </Contenido>
     </>

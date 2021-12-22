@@ -22,6 +22,12 @@ const Layout = props => {
         styles={css`
           html {
             font-size: 62.5%;
+            box-sizing: border-box;
+          }
+          *,
+          *:before,
+          *:after {
+            box-sizing: inherit;
           }
           body {
             font-size: 16px;
@@ -50,7 +56,10 @@ const Layout = props => {
       />
       <Helmet>
         <title>Hostal Arenal</title>
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet" />
+        <link
+          href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+          rel="stylesheet"
+        />
         <link
           href="https://fonts.googleapis.com/css2?family=Oooh+Baby&family=Roboto+Slab:wght@400;700&display=swap"
           rel="stylesheet"
