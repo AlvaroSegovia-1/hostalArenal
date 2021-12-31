@@ -8,7 +8,7 @@ const Boton = styled(Link)`
   margin-top: 2rem;
   padding: 1rem;
   background-color: rgba(44, 62, 80, 0.85);
-  width: 90%;
+  width: 80%;
   color: #fff;
   display: block;
   text-decoration: none;
@@ -36,14 +36,16 @@ export const HabitacionPreview = ({ habitacion }) => {
         border-radius: 8px;
         margin-bottom: 2rem;
         background-color: #ede6ed;
+        width: 95%;
+        margin: 1rem auto;
       `}
     >
       <GatsbyImage
         image={imagen2}
         alt="habitacion"
         css={css`
-          border-top-left-radius: 8px;
-          border-top-right-radius: 8px;
+          border-top-left-radius: 11px;
+          border-top-right-radius: 11px;
           border-top: 5px solid #ede6ed;
           border-left: 5px solid #ede6ed;
           border-right: 5px solid #ede6ed;

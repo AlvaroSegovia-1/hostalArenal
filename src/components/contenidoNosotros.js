@@ -7,8 +7,9 @@ import { css } from "@emotion/react"
 
 const Contenido = styled.main`
   padding-top: 4rem;
-  max-width: 1200px;
-  width: 95%;
+  padding-bottom: 4rem;
+  max-width: 1100px;
+  width: 90%;
   margin: 0 auto;
 
   @media (min-width: 768px) {

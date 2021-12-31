@@ -2,19 +2,13 @@ import * as React from "react"
 import Helmet from "react-helmet"
 import { Global, css } from "@emotion/react"
 import Header from "./header"
-
-//import { useStaticQuery, graphql } from "gatsby"
+import Footer from "./footer"
+import useSeo from "../hooks/use-seo"
 
 const Layout = props => {
-  /*   const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `) */
+  const seo = useSeo()
+
+  const {siteName, fallbackSeo: {description, title}} = seo
 
   return (
     <>
@@ -55,7 +49,8 @@ const Layout = props => {
         `}
       />
       <Helmet>
-        <title>Hostal Arenal</title>
+        <title>{title}</title>
+        <meta name="description" content={description}/>
         <link
           href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
           rel="stylesheet"
@@ -67,6 +62,9 @@ const Layout = props => {
       </Helmet>
       <Header />
       {props.children}
+      <Footer 
+      title={title}
+      />
     </>
   )
 }
